@@ -17,16 +17,28 @@ if($action == "pilotes"){
     include "vues/pilotes.php";
 }
 
-if($action == "piloteCrud"){
-    include "controller/PiloteController.php";
+if($action == "vueAjoutPilote"){
+    include "vues/vueAjoutPilote.php";
 }
-
 if($action == "ajoutPilote"){
-    include "controller/ajoutPilote.php";
+    include "dao/PiloteDAO/ajoutPilote.php";
 }
 
-if($action == "Equipes"){
-    include "vues/resultat.php";
+if($action == "team"){
+    include "vues/team.php";
 }
+
+if($action == "vueAjoutTeam"){
+    include "vues/vueAjoutTeam.php";
+}
+if($action == "ajoutTeam"){
+    include "dao/TeamDAO/ajoutTeam.php";
+}
+
+if($action == "deleteTeam"){
+    include "dao/TeamDAO/deleteTeam.php";
+}
+
+
 
 ?>

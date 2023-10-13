@@ -2,7 +2,7 @@
 <?php
 // Préparez une requête select 
 
-$requete = "SELECT DISTINCT * FROM pilotes;";
+$requete = "SELECT * FROM pilote;";
 $sth = $connexion->prepare($requete);
 $sth->execute();
 $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -12,25 +12,30 @@ $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 
 	<table>
 		<thead>
-			<th>Prenom</th>
 			<th>Nom</th>
+			<th>Prénom</th>
 			<th>Nationnalite</th>
 			<th>Date de Naissance</th>
+			<th>Id team</th>
 			<th>Modifier</th>
 			<th>Supprimer</th>
 		</thead>
 		
 			<?php foreach ($lignes as $ligne){ ?>
 				<tr>
-					<td><?php echo $ligne['prenom']; ?></td>
 					<td><?php echo $ligne['nom']; ?></td>
+					<td><?php echo $ligne['prenom']; ?></td>
 					<td><?php echo $ligne['nationalite']; ?></td>
-					<td><?php echo $ligne['date_naissance']; ?></td>
+					<td><?php echo $ligne['dateNaiss']; ?></td>
+					<td><?php echo $ligne['idTeam']; ?></td>
+
 					<td><!-- Mettez ici le lien ou le bouton pour modifier --></td>
 					<td><!-- Mettez ici le lien ou le bouton pour supprimer --></td>
 				</tr>
 			<?php } ?>
-			<tr><td class="td" colspan="6"><a href="index.php?action=ajoutPilote">Ajout pilote</a></td></tr>
+			<tr>
+				<td class="td" colspan="6"><a href="index.php?action=vueAjoutPilote">Ajout pilote</a></td>
+			</tr>
 
 
 	</table>

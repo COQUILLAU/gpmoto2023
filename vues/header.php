@@ -12,7 +12,7 @@
         <nav class="menu">
             <a href="index.php">ACCUEIL</a>                
             <a href="index.php?action=pilotes">Gestion des pilotes</a>                
-            <a href="index.php?action=Equipes">Gestion des equipes</a>
+            <a href="index.php?action=team">Gestion des equipes</a>
             <a href="index.php?">Gestion des motos</a>
             <a href="vues/vuePilote.php">Gestion des grand prix</a>
             <a href="vues/vuePilote.php">Presentation des grand prix</a>
