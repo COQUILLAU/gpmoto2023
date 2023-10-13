@@ -28,9 +28,8 @@ $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 					<td><?php echo $ligne['nationalite']; ?></td>
 					<td><?php echo $ligne['dateNaiss']; ?></td>
 					<td><?php echo $ligne['idTeam']; ?></td>
-
-					<td><!-- Mettez ici le lien ou le bouton pour modifier --></td>
-					<td><!-- Mettez ici le lien ou le bouton pour supprimer --></td>
+					<td><img src="ressources/edit.png"></td>
+					<td><a href="index.php?action=deletePilote&id_pilote=<?= $ligne['id'] ?>"><img src="ressources/poubelle.png"></a></td>
 				</tr>
 			<?php } ?>
 			<tr>
