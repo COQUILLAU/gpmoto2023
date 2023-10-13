@@ -1,13 +1,5 @@
 <?php
 
-// Préparez une requête select 
-
-$requete = "SELECT * FROM pilotes;";
-$sth = $connexion->prepare($requete);
-$sth->execute();
-$lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
-
-
 // Récupérer les données du formulaire
 $prenom = isset($_POST['prenom']) ? $_POST['prenom'] : '';
 $nom = isset($_POST['nom']) ? $_POST['nom'] : '';
@@ -27,4 +19,6 @@ $requeteSQL->execute(array(
     'date_naissance' => $date_naissance,
     'nationalite' => $nationalite
 ));
+header('Location: index.php?action=pilotes');
+
 ?>

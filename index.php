@@ -21,6 +21,9 @@ if($action == "piloteCrud"){
     include "controller/PiloteController.php";
 }
 
+if($action == "ajoutPilote"){
+    include "controller/ajoutPilote.php";
+}
 
 if($action == "Equipes"){
     include "vues/resultat.php";

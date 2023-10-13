@@ -1,6 +1,13 @@
+
 <?php
-include "controller/PiloteController.php";
+// Préparez une requête select 
+
+$requete = "SELECT DISTINCT * FROM pilotes;";
+$sth = $connexion->prepare($requete);
+$sth->execute();
+$lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
 <h1>Liste des pilotes</h1>
 
 	<table>
@@ -12,38 +19,19 @@ include "controller/PiloteController.php";
 			<th>Modifier</th>
 			<th>Supprimer</th>
 		</thead>
-		<tr>
-			<td><?php echo $ligne['id']?></td>
-			
-		</tr>
+		
+			<?php foreach ($lignes as $ligne){ ?>
+				<tr>
+					<td><?php echo $ligne['prenom']; ?></td>
+					<td><?php echo $ligne['nom']; ?></td>
+					<td><?php echo $ligne['nationalite']; ?></td>
+					<td><?php echo $ligne['date_naissance']; ?></td>
+					<td><!-- Mettez ici le lien ou le bouton pour modifier --></td>
+					<td><!-- Mettez ici le lien ou le bouton pour supprimer --></td>
+				</tr>
+			<?php } ?>
+			<tr><td class="td" colspan="6"><a href="index.php?action=ajoutPilote">Ajout pilote</a></td></tr>
+
+
 	</table>
-<form action="index.php?action=piloteCrud" method="POST">
-	<h2>Ajouter un Pilote</h2><br>
 
-	<div class="affichage">
-		<label>Prénom </label>
-		<input name="prenom" type="text" required>
-	</div>
-
-	<div class="affichage">
-		<label>Nom</label>
-		<input name="nom" type="text" required>
-    </div>
-
-    <div class="affichage">
-        <label>Date de naissance </label>
-        <input name="date_naissance" type="date" required>
-    </div>
-
-    <div class="affichage">
-        <label>Nationnalite</label>
-        <select name="nationalite">
-            <option value="fr">Francais</option>
-            <option value="ang">Anglais</option>
-        </select>
-    </div>
-	
-	<div>
-		<button type="submit">Ajoutez</button>
-	</div>
-</form>
