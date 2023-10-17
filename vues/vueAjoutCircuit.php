@@ -12,7 +12,7 @@
 		<input name="pays" type="text" required>
     </div>
 	
-	<div>
+	<div class="bouton_possition">
 		<button type="submit">Ajoutez</button>
 	</div>
 </form>

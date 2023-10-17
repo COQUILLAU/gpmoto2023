@@ -25,11 +25,15 @@ img{
 }
 body{
     text-align: center;
+    background-image: url('../ressources/gpmoto.webp');
+    background-size: cover;
 }
 
 table {
     border-collapse: collapse; 
-    width: 100%; 
+    width: 75%; 
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-left: 12.5%;
 }
 
 th {
@@ -39,8 +43,11 @@ th {
     text-align: center; 
 }
 
+tr {
+    border-bottom: 1px solid black;
+}
+
 td {
-    border: 1px solid #ddd;
     padding: 8px; 
     text-align: center;
 }
@@ -67,14 +74,19 @@ label{
 }
 
 form {
-    width: 300px;
+    width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     text-align: left;
+    margin-top: 10vh;
+}
+.titre {
+    margin-top: 2vh;
+    color: #fff;
 }
 
 h2 {
@@ -104,6 +116,12 @@ select {
 
 select {
     width: 100%;
+}
+
+.bouton_possition {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Style du bouton */

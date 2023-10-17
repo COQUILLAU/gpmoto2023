@@ -8,7 +8,7 @@ $lignes_select_team = $sth->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
-<h1>Liste des Equipes</h1>
+<h1 class="titre">Liste des Equipes</h1>
 
 	<table>
 		<thead>

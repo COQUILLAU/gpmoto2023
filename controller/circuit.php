@@ -7,7 +7,7 @@ $sth->execute();
 $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<h1>Liste des Circuits</h1>
+<h1 class="titre">Liste des Circuits</h1>
 
 	<table>
 		<thead>

@@ -18,7 +18,7 @@ if (isset($_GET['id_circuit'])) {
         <input name="date_course" type="date" required>
     </div>
 
-	<div>
+	<div class="bouton_possition">
 		<button type="submit">Ajoutez</button>
 	</div>
 </form>

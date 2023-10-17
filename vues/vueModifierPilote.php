@@ -1,47 +1,51 @@
-
 <?php
+include 'dao/NationnaliteDAO/selectNationnalite.php';
 
-if (isset($_GET['nom']) && isset($_GET['prenom'])) {
-    $nom = $_GET['nom'];
-    $prenom = $_GET['prenom'];
+$id = isset($_GET['id_pilote']) ? $_GET['id_pilote'] : null;
+
+if ($id) {
+    $requete = "SELECT * FROM pilote WHERE id = " . $id;
+    $sth = $connexion->prepare($requete);
+    $sth->execute();
+    $select_pilote = $sth->fetch(PDO::FETCH_ASSOC);
 }
-
-include('index.php?action=nationnalite');
-
 
 ?>
 
-<form action="index.php?action=ajoutPilote" method="POST">
-	<h2>Modifier le Pilote :</h2><br>
-    <h2><?php echo $nom , ' ', $prenom;?></h2>
+<form action="index.php?action=updatePilote" method="POST">
+    <h2>Modifier le Pilote :</h2><br>
+    <h2><?php echo $select_pilote['nom'], ' ', $select_pilote['prenom']; ?></h2>
 
-	<div class="affichage">
-		<label>Nom</label>
-		<input value="<?php echo $nom?>" name="nom" type="text" required>
-	</div>
+    <div class="affichage">
+        <label>Nom</label>
+        <input value="<?php echo $select_pilote['nom']; ?>" name="nom" type="text" required>
+    </div>
 
-	<div class="affichage">
-		<label>Prénom </label>
-		<input value="<?php echo $prenom?>" name="prenom" type="text" required>
-	</div>
+    <div class="affichage">
+        <label>Prénom</label>
+        <input value="<?php echo $select_pilote['prenom']; ?>" name="prenom" type="text" required>
+    </div>
 
-	<div class="affichage">
-		<label>Nationalité</label>
-		<select name="nationalite">
-			<?php foreach ($nationalites as $nationalite) { ?>
-				<option value="<?php echo $nationalite['libelle']; ?>">
-					<?php echo $nationalite['libelle']; ?>
-				</option>
-			<?php } ?>
-		</select>
-	</div>
+    <div class="affichage">
+        <label>Nationalité</label>
+        <select name="nationalite">
+            <?php foreach ($nationalites as $nationalite) { ?>
+                <option value="<?php echo $nationalite['libelle']; ?>" <?php echo $nationalite['libelle'] === $select_pilote['nationalite'] ? 'selected' : ''; ?>>
+                    <?php echo $nationalite['libelle']; ?>
+                </option>
+            <?php } ?>
+        </select>
+    </div>
 
-	<div class="affichage">
-		<label>Date de naissance </label>
-		<input name="date_naissance" type="date" required>
-	</div>
+    <div class="affichage">
+        <label>Date de naissance</label>
+        <input value="<?php echo $select_pilote['dateNaiss']; ?>" name="date_naissance" type="date" required>
+    </div>
 
-	<div>
-		<button type="submit">Ajouter</button>
-	</div>
+    <input value="<?php echo $select_pilote['idTeam']; ?>" name="idTeam" type="hidden">
+    <input value="<?php echo $select_pilote['id']; ?>" name="id_pilote" type="hidden">
+
+    <div>
+        <button type="submit">Modifier</button>
+    </div>
 </form>

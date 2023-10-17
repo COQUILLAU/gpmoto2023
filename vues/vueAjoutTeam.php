@@ -46,7 +46,7 @@ $pilotes = $sth->fetchAll(PDO::FETCH_ASSOC);
         </select>
     </div>
 
-    <div>
+    <div class="bouton_possition">
         <button type="submit">Ajoutez</button>
     </div>
 </form>

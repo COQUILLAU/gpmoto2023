@@ -37,12 +37,12 @@ if($action == "vueModifPilote"){
 }
 
 if($action == "updatePilote"){
-    include "dao/PiloteDAO/modifierPilote.php";
+    include "dao/PiloteDAO/updatePilote.php";
 }
 
 // CRUD NATIONNALITE
 
-if($action == "nationnalite"){
+if ($action == "nationalite") {
     include "dao/NationnaliteDAO/selectNationnalite.php";
 }
 

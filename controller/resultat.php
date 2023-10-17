@@ -1,1 +1,1 @@
-<h1>EQUIPES</h1>
+<h1 class="titre">EQUIPES</h1>

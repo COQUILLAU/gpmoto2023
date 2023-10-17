@@ -1,10 +1,8 @@
 <?php
-// Préparez une requête select 
+// Préparez une requête select nationnalite
 
-$requete = "SELECT * FROM nationaliteparam;";
-$sth = $connexion->prepare($requete);
-$sth->execute();
-$nationalites = $sth->fetchAll(PDO::FETCH_ASSOC);
+include 'dao/NationnaliteDAO/selectNationnalite.php' ;
+
 ?>
 
 <form action="index.php?action=ajoutPilote" method="POST">
@@ -36,7 +34,7 @@ $nationalites = $sth->fetchAll(PDO::FETCH_ASSOC);
 		<input name="date_naissance" type="date" required>
 	</div>
 
-	<div>
+	<div class="bouton_possition">
 		<button type="submit">Ajouter</button>
 	</div>
 </form>

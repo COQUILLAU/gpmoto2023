@@ -11,7 +11,7 @@ $sth->execute();
 $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<h1>Liste des courses de </h1>
+<h1 class="titre">Liste des courses de </h1>
 <h1 class='nomGP'><?php echo $libelle ?></h1>
 
 	<table>

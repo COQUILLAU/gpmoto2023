@@ -8,7 +8,7 @@ $sth->execute();
 $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<h1>Liste des pilotes</h1>
+<h1 class="titre">Liste des pilotes</h1>
 
 	<table>
 		<thead>
@@ -34,12 +34,12 @@ $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 								echo $ligne['idTeam'];
 							   } ?>
 					</td>					
-					<td><a href="index.php?action=vueModifPilote&id_pilote=<?= $ligne['id'] ?>&prenom=<?= $ligne['prenom'] ?>&nom=<?= $ligne['nom'] ?>"><img src="ressources/edit.png"></td>
+					<td><a href="index.php?action=vueModifPilote&id_pilote=<?= $ligne['id']?>"><img src="ressources/edit.png"></td>
 					<td><a href="index.php?action=deletePilote&id_pilote=<?= $ligne['id'] ?>"><img src="ressources/poubelle.png"></a></td>
 				</tr>
 			<?php } ?>
 			<tr>
-				<td class="td" colspan="6"><a href="index.php?action=vueAjoutPilote">Ajout pilote</a></td>
+				<td class="td" colspan="7"><a href="index.php?action=vueAjoutPilote">Ajout pilote</a></td>
 			</tr>
 
 
