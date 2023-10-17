@@ -27,8 +27,14 @@ $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 					<td><?php echo $ligne['prenom']; ?></td>
 					<td><?php echo $ligne['nationalite']; ?></td>
 					<td><?php echo $ligne['dateNaiss']; ?></td>
-					<td><?php echo $ligne['idTeam']; ?></td>
-					<td><img src="ressources/edit.png"></td>
+					<td>
+						<?php if ($ligne['idTeam'] == 0) {
+							  	echo "Pas de team";
+							  } else{ 
+								echo $ligne['idTeam'];
+							   } ?>
+					</td>					
+					<td><a href="index.php?action=vueModifPilote&id_pilote=<?= $ligne['id'] ?>&prenom=<?= $ligne['prenom'] ?>&nom=<?= $ligne['nom'] ?>"><img src="ressources/edit.png"></td>
 					<td><a href="index.php?action=deletePilote&id_pilote=<?= $ligne['id'] ?>"><img src="ressources/poubelle.png"></a></td>
 				</tr>
 			<?php } ?>

@@ -16,5 +16,5 @@ $requeteSQL->execute(array(
     'date_course' => $date_course,
     'id_circuit' => $id_circuit
 ));
-header('Location: index.php?action=course');
+header('Location: index.php?action=course&id_circuit=' . $id_circuit . '&nomGP=' . $nomGP);
 ?>

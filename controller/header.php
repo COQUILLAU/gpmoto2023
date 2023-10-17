@@ -14,9 +14,6 @@
             <a href="index.php?action=pilotes">Gestion des pilotes</a>                
             <a href="index.php?action=team">Gestion des equipes</a>
             <a href="index.php?action=circuit">Circuit</a>
-            <a href="index.php?action=course">Courses</a>
-            <a href="vues/vuePilote.php">Gestion des grand prix</a>
-            <a href="vues/vuePilote.php">Presentation des grand prix</a>
         </nav>
     </body>
 </html>

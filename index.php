@@ -1,6 +1,6 @@
 <?php
 include "dao/db.php";
-include "vues/header.php";
+include "controller/header.php";
 
 ?>
 
@@ -18,7 +18,7 @@ if($action == "index"){
 
 // CRUD PILOTES
 if($action == "pilotes"){
-    include "vues/pilotes.php";
+    include "controller/pilotes.php";
 }
 
 if($action == "vueAjoutPilote"){
@@ -32,10 +32,24 @@ if($action == "deletePilote"){
     include "dao/PiloteDAO/deletePilote.php";
 }
 
+if($action == "vueModifPilote"){
+    include "vues/vueModifierPilote.php";
+}
+
+if($action == "updatePilote"){
+    include "dao/PiloteDAO/modifierPilote.php";
+}
+
+// CRUD NATIONNALITE
+
+if($action == "nationnalite"){
+    include "dao/NationnaliteDAO/selectNationnalite.php";
+}
+
 // CRUD TEAM
 
 if($action == "team"){
-    include "vues/team.php";
+    include "controller/team.php";
 }
 
 if($action == "vueAjoutTeam"){
@@ -51,7 +65,7 @@ if($action == "deleteTeam"){
 
 // CRUD CIRCUIT
 if($action == "circuit"){
-    include "vues/circuit.php";
+    include "controller/circuit.php";
 }
 
 if($action == "vueAjoutCircuit"){
@@ -68,7 +82,7 @@ if($action == "deleteCircuit"){
 // CRUD COURSE
 
 if($action == "course"){
-    include "vues/course.php";
+    include "controller/course.php";
 }
 
 if($action == "deleteCourse"){
