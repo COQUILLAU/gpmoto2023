@@ -75,6 +75,15 @@ if($action == "vueAjoutCircuit"){
 if($action == "ajoutCircuit"){
     include "dao/CircuitDAO/ajoutCircuit.php";
 }
+
+if($action == "vueModifierCircuit"){
+    include "vues/vueModifierCircuit.php";
+}
+
+if($action == "updateCircuit"){
+    include "dao/CircuitDAO/updateCircuit.php";
+}
+
 if($action == "deleteCircuit"){
     include "dao/CircuitDAO/deleteCircuit.php";
 }

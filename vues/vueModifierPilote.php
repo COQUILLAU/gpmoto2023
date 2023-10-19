@@ -30,8 +30,8 @@ if ($id) {
         <label>Nationalité</label>
         <select name="nationalite">
             <?php foreach ($nationalites as $nationalite) { ?>
-                <option value="<?php echo $nationalite['libelle']; ?>" <?php echo $nationalite['libelle'] === $select_pilote['nationalite'] ? 'selected' : ''; ?>>
-                    <?php echo $nationalite['libelle']; ?>
+                <option value="<?php echo $nationalite['pays']; ?>" <?php echo $nationalite['pays'] === $select_pilote['nationalite'] ? 'selected' : ''; ?>>
+                    <?php echo $nationalite['pays']; ?>
                 </option>
             <?php } ?>
         </select>

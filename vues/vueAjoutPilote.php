@@ -22,8 +22,8 @@ include 'dao/NationnaliteDAO/selectNationnalite.php' ;
 		<label>Nationalité</label>
 		<select name="nationalite">
 			<?php foreach ($nationalites as $nationalite) { ?>
-				<option value="<?php echo $nationalite['libelle']; ?>">
-					<?php echo $nationalite['libelle']; ?>
+				<option value="<?php echo $nationalite['pays']; ?>">
+					<?php echo $nationalite['pays']; ?>
 				</option>
 			<?php } ?>
 		</select>

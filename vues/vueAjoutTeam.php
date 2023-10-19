@@ -1,4 +1,6 @@
 <?php
+include 'dao/NationnaliteDAO/selectNationnalite.php';
+
 // Préparez une requête select
 $requete = "SELECT * FROM pilote;";
 $sth = $connexion->prepare($requete);
@@ -14,10 +16,16 @@ $pilotes = $sth->fetchAll(PDO::FETCH_ASSOC);
         <input name="libelle" type="text" required>
     </div>
 
-    <div class="affichage">
-        <label>Pays</label>
-        <input name="pays" type="text" required>
-    </div>
+	<div class="affichage">
+		<label>Pays</label>
+		<select name="pays">
+			<?php foreach ($nationalites as $nationalite) { ?>
+				<option value="<?php echo $nationalite['pays']; ?>">
+					<?php echo $nationalite['pays']; ?>
+				</option>
+			<?php } ?>
+		</select>
+	</div>
 
     <div class="affichage">
         <label>Modele de Moto</label>
