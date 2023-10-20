@@ -1,8 +1,8 @@
 <?php
 // Préparez une requête select 
-if (isset($_GET['id_circuit'],$_GET['nomGP'])) {
+if (isset($_GET['id_circuit'],$_GET['nomCircuit'])) {
     $id_circuit = $_GET['id_circuit'];
-	$libelle = $_GET['nomGP'];
+	$libelle = $_GET['nomCircuit'];
 }
 
 $requete = "SELECT * FROM course WHERE id_circuit = '" . $id_circuit . "'";
@@ -11,7 +11,7 @@ $sth->execute();
 $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<h1 class="titre">Liste des courses de </h1>
+<h1 class="titre">Liste des courses du circuit </h1>
 <h1 class='nomGP'><?php echo $libelle ?></h1>
 
 	<table>

@@ -26,7 +26,7 @@ $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 					<td><?php echo $ligne['pays']; ?></td>
 					<td><?php echo $ligne['annee']; ?></td>
 					<td><?php echo $ligne['longueur']; ?></td>
-                    <td><a href="index.php?action=course&id_circuit=<?= $ligne['id'] ?>&nomGP=<?= $ligne['nom'] ?>">Afficher les courses</a></td>
+                    <td><a href="index.php?action=course&id_circuit=<?= $ligne['id'] ?>&nomCircuit=<?= $ligne['nom'] ?>">Afficher les courses</a></td>
 					<td><a href="index.php?action=vueModifierCircuit&id_circuit=<?= $ligne['id'] ?>&nomGP=<?= $ligne['nom'] ?>"><img src="ressources/edit.png"></td>
 					<td><a href="index.php?action=deleteCircuit&id_circuit=<?= $ligne['id'] ?>"><img src="ressources/poubelle.png"></a></td>
 				</tr>

@@ -59,6 +59,14 @@ if($action == "ajoutTeam"){
     include "dao/TeamDAO/ajoutTeam.php";
 }
 
+if($action == "vueModifierTeam"){
+    include "vues/vueModifierTeam.php";
+}
+
+if($action == "updateTeam"){
+    include "dao/TeamDAO/deleteTeam.php";
+}
+
 if($action == "deleteTeam"){
     include "dao/TeamDAO/deleteTeam.php";
 }

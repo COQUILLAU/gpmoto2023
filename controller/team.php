@@ -14,7 +14,7 @@ $lignes_select_team = $sth->fetchAll(PDO::FETCH_ASSOC);
 		<thead>
 			<th>Libelle</th>
 			<th>Pays</th>
-			<th>Model de Moto</th>
+			<th>Modèle de Moto</th>
 			<th>Pilote 1</th>
 			<th>Pilote 2</th>
 			<th>Modifier</th>
@@ -29,7 +29,7 @@ $lignes_select_team = $sth->fetchAll(PDO::FETCH_ASSOC);
         		<td><?php echo $ligne['idPilote1']; ?></td>
         		<td><?php echo $ligne['idPilote2']; ?></td>
 				
-				<td><img src="ressources/edit.png"></td>
+				<td><a href="index.php?action=vueModifierTeam&id_team=<?= $ligne['id'] ?>"><img src="ressources/edit.png"></a></td>
 				<td><a href="index.php?action=deleteTeam&id_team=<?= $ligne['id'] ?>"><img src="ressources/poubelle.png"></a></td>
 			<tr>
 				<?php } ?>
