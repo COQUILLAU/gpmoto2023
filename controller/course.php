@@ -19,7 +19,6 @@ $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 			<th>Nom GP</th>
 			<th>Date</th>
 			<th>Participants</th>
-			<th>Modifier</th>
 			<th>Supprimer</th>
 		</thead>
 		
@@ -28,7 +27,6 @@ $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 					<td><?php echo $ligne['libelleGP']; ?></td>
 					<td><?php echo $ligne['dateCourse']; ?></td>
 					<td><?php echo $ligne['participants']; ?></td>
-					<td><img src="ressources/edit.png"></td>
 					<td><a href="index.php?action=deleteCourse&id_course=<?= $ligne['id'] ?>&id_circuit=<?php echo $id_circuit ?>nomGP=<?php echo $libelle ?>"><img src="ressources/poubelle.png"></a></td>
 				</tr>
 			<?php } ?>

@@ -44,4 +44,70 @@ $lignes = $sth->fetchAll(PDO::FETCH_ASSOC);
 
 
 	</table>
+	<div class="tableau_pilote">
+		<div class="all_background_pilote">
 
+			<div class="background_pilote">
+				<div class="left">
+					<img class="pilote" src="./ressources/gpmoto.webp">
+					<img class="pays" src="./ressources/gpmoto.webp">
+				</div>
+
+				<div class="right">
+
+					<div class="top">
+						<h2>NOM PRENOM</h2>
+						<p>Date de Naissance</p>
+					</div>
+
+					<div class="bottom">
+						<h2>TEAM</h2>
+						<p>Coéquipier : </p>
+					</div>
+			
+				</div>
+			</div>
+
+			<div class="background_pilote">
+				<div class="left">
+					<img class="pilote" src="./ressources/gpmoto.webp">
+					<img class="pays" src="./ressources/gpmoto.webp">
+				</div>
+
+				<div class="right">
+
+					<div class="top">
+						<h2>NOM PRENOM</h2>
+						<p>Date de Naissance</p>
+					</div>
+
+					<div class="bottom">
+						<h2>TEAM</h2>
+						<p>Coéquipier : </p>
+					</div>
+			
+				</div>
+			</div>
+
+			<div class="background_pilote">
+				<div class="left">
+					<img class="pilote" src="./ressources/gpmoto.webp">
+					<img class="pays" src="./ressources/gpmoto.webp">
+				</div>
+
+				<div class="right">
+
+					<div class="top">
+						<h2>NOM PRENOM</h2>
+						<p>Date de Naissance</p>
+					</div>
+
+					<div class="bottom">
+						<h2>TEAM</h2>
+						<p>Coéquipier : </p>
+					</div>
+			
+				</div>
+			</div>
+		</div>
+	</div>

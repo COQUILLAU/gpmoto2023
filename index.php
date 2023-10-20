@@ -64,7 +64,7 @@ if($action == "vueModifierTeam"){
 }
 
 if($action == "updateTeam"){
-    include "dao/TeamDAO/deleteTeam.php";
+    include "dao/TeamDAO/updateTeam.php";
 }
 
 if($action == "deleteTeam"){
@@ -104,6 +104,14 @@ if($action == "course"){
 
 if($action == "deleteCourse"){
     include "dao/CourseDAO/deleteCourse.php";
+}
+
+if($action == "vueModifierCourse"){
+    include "vues/vueModifierCourse.php";
+}
+
+if($action == "updateCourse"){
+    include "dao/CourseDAO/updateCourse.php";
 }
 
 if($action == "vueAjoutCourse"){
